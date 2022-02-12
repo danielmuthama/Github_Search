@@ -1,0 +1,61 @@
+<div class="container">
+        <div class="row">
+        <spinner [visible]="isUserDataLoading"> </spinner>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                <div class="card card-inverse card-info">
+                    <img class="card-img-top" [src]="user.avatar_url">
+                    <div class="card-block">
+                        <h4 class="card-title"> {{user.name}} <span style="color:#99999b">@{{user.login}}</span></h4>
+                        <div class="card-text">
+                            {{user.bio}}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <label><span class="fa fa-envelope-o" aria-hidden="true"></span> {{user.blog}}</label>
+                        <label><span class="fa fa-map-marker" aria-hidden="true"></span> {{user.location}}</label>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-8">
+                    <br/>
+                    <h5>Follwers</h5><hr>
+                    <div class="row">
+                        <div class="img" *ngFor="#f of followers">
+                            <img class=" rounded-circle" [src]="f.avatar_url" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <p class="mt-0">{{f.login}}</p>
+                            </div>
+                        </div> 
+                    </div><br>
+                    <h5>Followings</h5><hr>
+                    <div class="row">
+                        <div class="img" *ngFor="#f of followings">
+                            <img class=" rounded-circle" [src]="f.avatar_url" alt="Generic placeholder image">
+                            <div class="media-body">
+                            <p class="mt-0">{{f.login}}</p>
+                            </div>
+                        </div> 
+                                
+                    </div> <br/>
+
+                   <div class="row"> 
+                   <div class="col-md-12">
+                        <h5>Repositories </h5><hr>  
+                    </div>
+                    <div class="row">
+                        <div class="col-6" *ngFor="#r of repos">
+                            <div class="card border-dark mb-3" style="max-width: 22rem;">
+                                <div class="card-body text-dark">
+                                    <h5 class="card-title">{{r.name}}</h5>
+                                    <p class="card-text">{{r.description | summary }} </p>
+                                    <a href="#"><i class="fa fa-circle" aria-hidden="true"> </i> {{ r.language}} </a> &nbsp;&nbsp;
+                                    <a href="#"><i class="fa fa-star" aria-hidden="true"> </i> {{ r.stargazers_count}} </a>
+                                </div>
+                            </div>         
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+</div>
