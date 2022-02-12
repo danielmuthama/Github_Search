@@ -1,0 +1,19 @@
+<p-tabView>
+  <p-tabPanel header="Search" [selected]="!flag">
+    <div class="search">
+      <i class="fab fa-github logo"></i>
+      <app-search></app-search>
+      <app-serach-results [users]="users"></app-serach-results>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Repos" [selected]="flag">
+    <app-repos *ngIf="flag; else loader"></app-repos>
+    <ng-template #loader>
+      <app-loader></app-loader>
+    </ng-template>
+  </p-tabPanel>
+</p-tabView>
+
+<p class="message">
+  🖥️ Desktop Only 🖥️
+</p>

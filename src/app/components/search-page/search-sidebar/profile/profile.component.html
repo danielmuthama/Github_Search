@@ -1,0 +1,60 @@
+<div class="profile">
+  <img src="{{ selectedUser.bio.avatar_url }}" alt="" class="avatar" />
+  <div class="name">{{ selectedUser.bio.name }}</div>
+  <div class="login">{{ selectedUser.bio.login }}</div>
+  <div class="details">
+    <div class="bio">{{ selectedUser.bio.bio }}</div>
+    <div class="company">
+      <i class="fas fa-user-friends icon"></i>
+      {{ selectedUser.bio.company }}
+    </div>
+    <div class="location">
+      <i class="fas fa-map-marker-alt"></i> {{ selectedUser.bio.location }}
+    </div>
+    <div class="blog">
+      <i class="fas fa-link"></i
+      ><a href="devpato.github.io"> {{ selectedUser.bio.blog }}</a>
+    </div>
+  </div>
+  <div class="organizations">
+    <div class="title">Organizations</div>
+    <div class="logos">
+      <img
+        src="{{ org.avatar_url }}"
+        alt=""
+        class="org"
+        *ngFor="let org of selectedUser.orgs"
+      />
+    </div>
+  </div>
+  <div class="stats">
+    <div class="title">Stats</div>
+    <div class="details">
+      <div class="repos">
+        <i class="fab fa-git-alt"></i>
+        Repos:
+        {{ selectedUser.bio.public_repos }}
+      </div>
+      <div class="followers">
+        <i class="fas fa-users"></i>
+        Followers:
+        {{ selectedUser.bio.followers }}
+      </div>
+      <div class="following">
+        <i class="fas fa-user-friends"></i>
+        Following:
+        {{ selectedUser.bio.following }}
+      </div>
+      <div class="starred">
+        <i class="fas fa-star"></i>
+        Starred:
+        {{ selectedUser.starred.length }}
+      </div>
+    </div>
+  </div>
+  <div class="view-github">
+    <a href="{{ selectedUser.bio.html_url }}" targe="_blank"
+      ><i class="fab fa-github view-github"></i
+    ></a>
+  </div>
+</div>
