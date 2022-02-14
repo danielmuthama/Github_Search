@@ -1,31 +1,27 @@
 # GithubSearch
 
-This small app using the Github API to search and retrive the information from the Github users. **Desktop version only**
-
-
-## Stack
-<p>Angular<p>
-<p>SASS<p>
-<p>RxJS<p>
-<p>NGRX<p>
-<p>PrimeNG<p>
-
-## Online version
-
-[Github Search App](https://githubsearch-f4cd3.firebaseapp.com/)
-
-## Angular CLI Version
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
 ## Build
 
-`ng build` passed ✅
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Contributing to this project
+## Running unit tests
 
-If you want to contribute to this repo, don't forget to create a Pull Request.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

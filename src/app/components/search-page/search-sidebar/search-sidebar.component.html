@@ -1,8 +1,0 @@
-<div class="sidebar">
-  <ng-container *ngIf="$selectedUser | async as selectedUser; else loader">
-    <app-profile [selectedUser]="selectedUser"></app-profile>
-  </ng-container>
-  <ng-template #loader>
-    <app-loader></app-loader>
-  </ng-template>
-</div>
