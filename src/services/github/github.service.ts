@@ -11,10 +11,10 @@ export class GithubSearchService {
   BASE_URL = 'https://api.github.com';
   constructor(private http: HttpClient) {}
 
-  getUsers(user: string): Observable<UserProxy[]> {
+  getUsers(user: string): Observable<UserProxy> {
     let params = new HttpParams().set('q', user);
     const USER_URL = '/search/users';
-    return this.http.get<UserProxy[]>(this.BASE_URL + USER_URL, {
+    return this.http.get<UserProxy>(this.BASE_URL + USER_URL, {
       params: params
     });
   }

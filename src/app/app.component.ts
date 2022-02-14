@@ -47,8 +47,8 @@ export class AppComponent implements OnInit {
 
     try {
       this.isLoadingProfile = true;
-      const showingProfile = await this.githubService.getUsers(this.nameToSearchFormControl.value);
-      const showingProfileRepositories = await this.githubService.getRepos(this.nameToSearchFormControl.value);
+      var showingProfile =  this.githubService.getUsers(this.nameToSearchFormControl.value);
+      var showingProfileRepositories = this.githubService.getRepos(this.nameToSearchFormControl.value);
     } catch (error: unknown) {
       this.snackBar.open('Ok');
     } finally {
