@@ -39,20 +39,7 @@ export class SeeProfileComponent implements OnInit {
         // console.log(response);
         // this.data = response;
   
-        //this.user = response[0];  //get all data
-        
-        //this.repoes = response;
-        // this.user=response[0].owner;
-        // //this.user.login = response[0].owner.login  //get only one piece of data
-        // //this.user.avatar_url = response[0].owner.avatar_url
-        // this.user.repositories = response;
-        //less efficient way
-        // for (let i = 0; i < response.length; i++) {
-         //  this.user.name = response[i].name;
-         //  this.user.language = response[i].language;
-        // }
-        // this.getUser.items += 10;
-        // this.getUser.page++;
+     ;
       },
       (err) => {
         this.username = "";
