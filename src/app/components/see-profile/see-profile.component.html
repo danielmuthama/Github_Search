@@ -7,7 +7,7 @@
     </div>
 
     <div class="text-center" *ngIf="user && error==false">
-        <h3>User:
+        <h3 style="background-color: white; color:black;">User:
             <a [href]="(user.html_url | safe:'url') " target="_blank" *ngIf="user.login;else showJustUsername">{{user.login}}</a>
             <ng-template #showJustUsername>{{_username}}</ng-template>
         </h3>
@@ -15,7 +15,7 @@
 
         <div class="search-results" infinite-scroll (scrolled)="onScroll()" [infiniteScrollDistance]="2">
             <div *ngFor="let item of user.repositories" class="text-center">
-                <p><strong>Repository name: </strong>
+                <p style="background-color: white; color:black;"><strong>Repository name: </strong>
                     <a [href]="(item.git_url | safe:'url') " target="_blank">{{item.name}}</a>
                 </p>
                 <p *ngIf="item.language">Language: {{item.language}}</p>
